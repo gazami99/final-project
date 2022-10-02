@@ -8,9 +8,9 @@
   	성광식 <<
 
 
-# 변경사항
-## 2022.10.02 9:08 
-  github action maven evn 셋팅완료
+## 변경사항
+### 2022.10.02 9:08 
+	github action maven evn 셋팅완료
 
 # 요청사항 밑에 기입 
 
