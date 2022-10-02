@@ -6,7 +6,7 @@
 
 <div align=center>
 	<img src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=flat&logo=kubernetes&logoColor=white">
-	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=flat&logo=podman&logoColor=white">
+	<img src="https://img.shields.io/badge/Podman-892CA0.svg?style=flat&logo=podman&logoColor=white">
 	<img src="https://img.shields.io/badge/Github Actions-2088FF.svg?style=flat&logo=githubactions&logoColor=white">
 	
 	
