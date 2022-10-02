@@ -1,0 +1,27 @@
+
+server:
+  servlet:
+    context-path: /computer 
+  port: 5000
+    
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    view:
+      prefix: /WEB-INF/board/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 1234
+    url: jdbc:mysql://localhost/playdata?characterEncoding=UTF-8
+    username: bigdata
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+ 
+      

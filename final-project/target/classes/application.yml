@@ -1,0 +1,20 @@
+server:
+  servlet:
+    context-path: /final
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: bigdata
+    url: jdbc:mysql://localhost/playdata?characterEncoding=UTF-8
+    username: bigdata
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/board/
+      suffix: .jsp
