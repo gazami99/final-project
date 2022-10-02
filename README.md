@@ -1,7 +1,7 @@
 # 파이널 프로젝트
 
 
-<img src="https://img.shields.io/badge/kunbernetes-326CE5?style=for-the-badge&logo=java&logoColor=white"> 
+<img src="https://img.shields.io/badge/kunbernetes-326CE5?style=for-the-badge&logo=kunbernetes&logoColor=blue"> 
 ## 팀원:
 	
 	엄호용 << 
