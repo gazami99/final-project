@@ -8,7 +8,7 @@
 	<img src="https://img.shields.io/badge/html5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
 	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=for-the-badge&logo=podman&logoColor=white">
 	<img src="https://img.shields.io/badge/elastic stack-005571.svg?style=for-the-badge&logo=elastic stack&logoColor=white">
-	<img src="https://img.shields.io/badge/react#61DAFB.svg?style=for-the-badge&logo=react&logoColor=white">
+	<img src="https://img.shields.io/badge/react-61DAFB.svg?style=for-the-badge&logo=react&logoColor=white">
 	
 	
 	
