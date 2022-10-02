@@ -6,7 +6,7 @@
 	<img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
 	<img src="https://img.shields.io/badge/github%20actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white">
 	
-	<img src="https://img.shields.io/badge/html5-E34F261.svg?style=for-the-badge&logo=html5&logoColor=white">
+	
 	
 </div>
 ## 팀원:
