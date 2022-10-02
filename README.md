@@ -1,7 +1,7 @@
 # 파이널 프로젝트
 <div align=center>
 <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=flat&logo=Amazon Ec2&logoColor=white">
-<img src="https://img.shields.io/badge/mysql-4479A1.svg?style=flat&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=flat&logo=MySQL&logoColor=white">
 </div>
 
 <div align=center>
@@ -14,7 +14,7 @@
 
 <div align=center>
 <img src="https://img.shields.io/badge/Spring-6DB33F.svg?style=flat&logo=spring&logoColor=white">
-<img src="https://img.shields.io/badge/html5-E34F26.svg?style=flat&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/react-61DAFB.svg?style=flat&logo=react&logoColor=black">
 
 </div>
