@@ -36,7 +36,7 @@
 ### 2022.10.02 
 
 	github action maven evn 셋팅완료
-	pr 요청 
+	merge 요청 승인  
 	
 ## 참고사항
 
