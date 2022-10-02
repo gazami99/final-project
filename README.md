@@ -20,7 +20,7 @@
 </div>
 
 <div align=center>
-<img src="https://img.shields.io/badge/elastic stack-005571.svg?style=flat&logo=elastic stack&logoColor=white">
+<img src="https://img.shields.io/badge/Elastic Stack-005571.svg?style=flat&logo=elastic stack&logoColor=white">
 
 </div>
 
