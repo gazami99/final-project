@@ -5,15 +5,15 @@
 </div>
 
 <div align=center>
-	<img src="https://img.shields.io/badge/kubernetes-326CE5.svg?style=flat&logo=kubernetes&logoColor=white">
+	<img src="https://img.shields.io/badge/Kubernetes-326CE5.svg?style=flat&logo=kubernetes&logoColor=white">
 	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=flat&logo=podman&logoColor=white">
-	<img src="https://img.shields.io/badge/github actions-2088FF.svg?style=flat&logo=githubactions&logoColor=white">
+	<img src="https://img.shields.io/badge/Github Actions-2088FF.svg?style=flat&logo=githubactions&logoColor=white">
 	
 	
 </div>
 
 <div align=center>
-<img src="https://img.shields.io/badge/spring-6DB33F.svg?style=flat&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/Spring-6DB33F.svg?style=flat&logo=spring&logoColor=white">
 <img src="https://img.shields.io/badge/html5-E34F26.svg?style=flat&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/react-61DAFB.svg?style=flat&logo=react&logoColor=black">
 
