@@ -6,7 +6,7 @@ name: Java CI with Maven
 on:
   push:
     paths:
-      - './final-project/**'
+      - 'final-project/**'
 
   pull_request:
       paths:
