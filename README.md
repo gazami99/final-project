@@ -14,6 +14,11 @@
 	
 	
 </div>
+
+<div align=center>
+
+	<img src="https://img.shields.io/badge/amazon e2-61DAFB.svg?style=for-the-badge&logo=amazon e2&logoColor=black">
+</div>
 ## 팀원:
 	
 	엄호용 << 
