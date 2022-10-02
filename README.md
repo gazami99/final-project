@@ -1,6 +1,6 @@
 # 파이널 프로젝트
 <div align=center>
-<img src="https://img.shields.io/badge/amazon ec2-FF9900?style=for-the-badge&logo=amazon ec2&logoColor=white">
+<img src="https://img.shields.io/badge/amazon ec2-FF9900?style=plastic&logo=amazon ec2&logoColor=white">
 <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
 </div>
 
