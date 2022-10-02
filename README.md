@@ -1,23 +1,26 @@
 # 파이널 프로젝트
+<div align=center>
+<img src="https://img.shields.io/badge/amazon ec2-FF9900?style=for-the-badge&logo=amazon ec2&logoColor=white">
+<img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
+</div>
 
 <div align=center>
 	<img src="https://img.shields.io/badge/kubernetes-326CE5.svg?style=for-the-badge&logo=kubernetes&logoColor=white">
-	<img src="https://img.shields.io/badge/spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
-	<img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white">
-	<img src="https://img.shields.io/badge/github actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white">
-	<img src="https://img.shields.io/badge/html5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
 	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=for-the-badge&logo=podman&logoColor=white">
-	<img src="https://img.shields.io/badge/elastic stack-005571.svg?style=for-the-badge&logo=elastic stack&logoColor=white">
-	<img src="https://img.shields.io/badge/react-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black">
-	
-	
+	<img src="https://img.shields.io/badge/github actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white">
 	
 	
 </div>
 
 <div align=center>
+<img src="https://img.shields.io/badge/spring-6DB33F.svg?style=for-the-badge&logo=spring&logoColor=white">
+<img src="https://img.shields.io/badge/html5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/react-61DAFB.svg?style=for-the-badge&logo=react&logoColor=black">
 
-<img src="https://img.shields.io/badge/amazon ec2-FF9900?style=for-the-badge&logo=amazon ec2&logoColor=white">
+</div>
+
+<div align=center>
+<img src="https://img.shields.io/badge/elastic stack-005571.svg?style=for-the-badge&logo=elastic stack&logoColor=white">
 
 </div>
 
