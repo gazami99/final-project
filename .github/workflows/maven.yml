@@ -23,4 +23,4 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file /final-project/pom.xml
+      run: mvn -B package --f .github/pom.xml
