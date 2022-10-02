@@ -17,7 +17,8 @@
 
 <div align=center>
 
-	<img src="https://img.shields.io/badge/amazon e2-61DAFB.svg?style=for-the-badge&logo=amazon e2&logoColor=black">
+	<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+
 </div>
 ## 팀원:
 	
