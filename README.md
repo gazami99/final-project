@@ -6,8 +6,8 @@
 
 <div align=center>
 	<img src="https://img.shields.io/badge/kubernetes-326CE5.svg?style=plastic&logo=kubernetes&logoColor=white">
-	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=for-the-badge&logo=podman&logoColor=white">
-	<img src="https://img.shields.io/badge/github actions-2088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white">
+	<img src="https://img.shields.io/badge/podman-892CA0.svg?style=flat&logo=podman&logoColor=white">
+	<img src="https://img.shields.io/badge/github actions-2088FF.svg?style=flat-square&logo=githubactions&logoColor=white">
 	
 	
 </div>
