@@ -1,8 +1,12 @@
 package kr.pe.cshop.model.service;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
 
-@Service
-public class MemoryCardService {
+import kr.pe.cshop.model.domain.MemoryCard;
 
+public interface MemoryCardService {
+
+    List<MemoryCard> getBoardList(MemoryCard memorycard);
+
+    MemoryCard getBoard(MemoryCard board);
 }
