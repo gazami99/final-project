@@ -1,4 +1,4 @@
-package kr.pe.cshop;
+package io.playdata;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
