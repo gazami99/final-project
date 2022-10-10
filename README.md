@@ -39,6 +39,12 @@
 	github action maven evn 셋팅완료
 	merge 요청 승인  
 	
+### 2022.10.10
+	
+	@SpringBootApplication(scanBasePackages= {"kr.pe.cshop.model.service.MemoryCardService"}) << 스캔 실패해서 명시적으로 표현함 
+	SpringBootTest 자꾸 에러나서 경로 변경함 io.playdata > kr.pe.cshop
+	
+	
 ## 참고사항
 
 	1. final-project 디렉토리 push , pr 요청시 github action 트리거
