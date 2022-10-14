@@ -1,10 +1,19 @@
+
 server:
   servlet:
-    context-path: /step161
+    context-path: /computer 
+  port: 5000
+    
 spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    view:
+      prefix: /WEB-INF/board/
+      suffix: .jsp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: bigdata
+    password: 1234
     url: jdbc:mysql://localhost/playdata?characterEncoding=UTF-8
     username: bigdata
   jpa:
@@ -12,9 +21,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     generate-ddl: false
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
     show-sql: true
-  mvc:
-    view:
-      prefix: /WEB-INF/board/
-      suffix: .jsp
+ 
+      
