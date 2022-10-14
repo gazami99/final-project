@@ -24,7 +24,7 @@ public class MemoryCardController {
 	@GetMapping("/getMemoryCard")
 	public String getMemoryCard(MemoryCard mc) {
 	List<MemoryCard> memoryCardList = mcService.getMemoryCardList(mc); 
-		return "getBoard";
+		return "memoryCardList";
 	}
 
 }

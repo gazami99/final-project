@@ -13,8 +13,8 @@ spring:
       suffix: .jsp
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 1234
-    url: jdbc:mysql://localhost/playdata?characterEncoding=UTF-8
+    password: bigdata
+    url: jdbc:mysql://localhost/final_project?characterEncoding=UTF-8
     username: bigdata
   jpa:
     database: mysql
