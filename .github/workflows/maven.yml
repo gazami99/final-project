@@ -6,11 +6,11 @@ name: Java CI with Maven
 on:
   push:
     paths:
-      - 'FPBoot/**'
+      - 'FPBoot-deploy/**'
 
   pull_request:
       paths:
-      - 'FPBoot/**'
+      - 'FPBoot-deploy/**'
  
 
 jobs:
