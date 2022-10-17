@@ -1,9 +1,10 @@
 package kr.pe.cshop.model.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.pe.cshop.model.domain.MemoryCard;
 import kr.pe.cshop.model.service.MemoryCardService;
@@ -20,9 +21,9 @@ public class MemoryCardController {
 	// }
 	//GET,POST,PUT,DELETE - service & dao(repository app. interface abstract...)
 
-	@GetMappingng("/getMemoryCard")
-	public String getBoard(MemoryCard mc) {
-		
+	@GetMapping("/getMemoryCard")
+	public String getMemoryCard(MemoryCard mc) {
+	List<MemoryCard> memoryCardList = mcService.getMemoryCardList(mc); 
 		return "getBoard";
 	}
 

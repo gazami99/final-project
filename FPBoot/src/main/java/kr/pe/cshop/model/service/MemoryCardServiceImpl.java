@@ -3,12 +3,10 @@ package kr.pe.cshop.model.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import kr.pe.cshop.model.dao.MemoryCardRepository;
 import kr.pe.cshop.model.domain.MemoryCard;
 
-@Service
 public class MemoryCardServiceImpl {
     @Autowired
     MemoryCardRepository mcRepo;
