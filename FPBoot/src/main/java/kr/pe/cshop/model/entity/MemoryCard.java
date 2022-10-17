@@ -1,4 +1,4 @@
-package kr.pe.cshop.model.domain;
+package kr.pe.cshop.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-
+@Entity
 public class MemoryCard {
 
 	@Id
@@ -47,6 +47,7 @@ public class MemoryCard {
 		builder.append(price128GB);
 		builder.append(" price64GB : ");
 		builder.append(price64GB);
+		
 		return builder.toString();
 	}
 }

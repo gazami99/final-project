@@ -1,4 +1,4 @@
-package kr.pe.cshop.model.domain;
+package kr.pe.cshop.model.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -12,23 +12,19 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-
-public class MemoryCard {
+@Entity
+public class Cpu {
 
 	@Id
 	private String sn;
 
 	private String brand;
 
-	private String mcName;
+	private String series;
 
-	private String price512GB;
+	private String hz;
 
-	private String price256GB;
-
-	private String price128GB;
-
-	private String price64GB;
+	private String core;
 
 	@Override
 	public String toString() {
@@ -37,16 +33,13 @@ public class MemoryCard {
 		builder.append(sn);
 		builder.append(" 제조사 : ");
 		builder.append(brand);
-		builder.append(" 제품명 : ");
-		builder.append(mcName);
-		builder.append(" price512GB : ");
-		builder.append(price512GB);
-		builder.append(" price256GB : ");
-		builder.append(price256GB);
-		builder.append(" price128GB : ");
-		builder.append(price128GB);
-		builder.append(" price64GB : ");
-		builder.append(price64GB);
+		builder.append(" 시리즈 : ");
+		builder.append(series);
+		builder.append(" 속도 : ");
+		builder.append(hz);
+		builder.append(" 코어 개수 : ");
+		builder.append(core);
+	
 		return builder.toString();
 	}
 }
