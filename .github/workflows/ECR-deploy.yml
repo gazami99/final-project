@@ -2,11 +2,14 @@ name: Deploy to Amazon ECR
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - 'FPBoot-deploy/**'
+
   pull_request:
-    branches:
-      - main
+      paths:
+      - 'FPBoot-deploy/**'
+ 
+
 env:
   AWS_REGION: region
   ECR_REGISTRY: ecr_registry주소
