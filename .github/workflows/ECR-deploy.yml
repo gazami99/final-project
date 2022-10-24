@@ -10,38 +10,35 @@ on:
       - 'FPBoot-deploy/**'
  
 
-env:
-  AWS_REGION: ap-northeast-2
-  ECR_REGISTRY: ecr_registry주소
-  ECR_REPOSITORY: repo주소
-  IMAGE_TAG: latest
 jobs:
-  deploy:
-    name: Deploy
+  
+  build:
+    
+    name: Build Image
     runs-on: ubuntu-latest
-    environment: production
 
+   
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
 
+    - name: Check out code
+      uses: actions/checkout@v2
+    
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ env.AWS_REGION }}
+        aws-region: ap-south-1
 
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
 
     - name: Build, tag, and push image to Amazon ECR
-      id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
+        ECR_REPOSITORY: docker_nodejs_demo
+        IMAGE_TAG: nodejs_demo_image
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
