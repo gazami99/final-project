@@ -11,7 +11,7 @@ on:
  
 
 env:
-  AWS_REGION: region
+  AWS_REGION: ap-northeast-2
   ECR_REGISTRY: ecr_registry주소
   ECR_REPOSITORY: repo주소
   IMAGE_TAG: latest
