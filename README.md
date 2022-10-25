@@ -44,7 +44,7 @@
 	@SpringBootApplication(scanBasePackages= {"kr.pe.cshop.model.service.MemoryCardService"}) << 스캔 실패해서 명시적으로 표현함 
 	SpringBootTest 자꾸 에러나서 경로 변경함 io.playdata > kr.pe.cshop
 	
-### 2022.10.10
+### 2022.10.25
 
 	Github action Delpoy ECR 등록 성공 
 	
