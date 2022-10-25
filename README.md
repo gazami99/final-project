@@ -2,7 +2,7 @@
 <div align=center>
 <img src="https://img.shields.io/badge/Amazon EC2-FF9900?style=flat&logo=Amazon Ec2&logoColor=white">
 <img src="https://img.shields.io/badge/MySQL-4479A1.svg?style=flat&logo=MySQL&logoColor=white">
-<img src="https://img.shields.io/badge/Amazon RDS-FF9900.svg?style=flat&logo=Amazon RDS&logoColor=white">
+<img src="https://img.shields.io/badge/Amazon RDS-527FFF.svg?style=flat&logo=Amazon RDS&logoColor=white">
 </div>
 
 <div align=center>
