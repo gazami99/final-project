@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Spring Boot-6DB33F.svg?style=flat&logo=Spring Boot&logoColor=white">
 <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=flat&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=white">
-<img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=React&logoColor=black">
+ <img src="https://img.shields.io/badge/React-61DAFB.svg?style=flat&logo=React&logoColor=black">
 
 </div>
 
