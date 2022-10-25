@@ -46,7 +46,7 @@
 	
 ### 2022.10.25
 
-	Github action Delpoy ECR 등록 성공 
+	Github action Delpoy ECR 등록 성공(maven build 확장자가 war라서 Dockerfile 세팅에서 jar를 war로 바꾸니 작동됨 )
 	
 	
 ## 참고사항
