@@ -25,7 +25,7 @@
 <div align=center>
 <img src="https://img.shields.io/badge/Elastic Stack-005571.svg?style=flat&logo=elastic stack&logoColor=white">
 
-
+<img src="https://raw.github.com/specialorange/FDXCM/master/doc/controllers_brief.svg">
 </div>
 
 ## 팀원:
