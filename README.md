@@ -26,7 +26,7 @@
 <img src="https://img.shields.io/badge/Elastic Stack-005571.svg?style=flat&logo=elastic stack&logoColor=white">
 </div>
 <div align=center>
-<img src="https://github.com/gazami99/final-project/blob/main/image/finalproject.svg">
+<img src="https://github.com/gazami99/final-project/blob/main/image/finalproject.png">
 </div>
 ## 팀원:
 	
