@@ -56,6 +56,7 @@
 ### 2022.10.30
 	
 	k8s metric server  api server FailedDiscoveryCheck 해결(Client.Timeout exceeded while awaiting headers)
+	컨테이너화된 조건으로 metric server 가 통신함 (포트 4443) 그래서 ec2에 포트 4443 열어줘야함
 	
 	
 	
