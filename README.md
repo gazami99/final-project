@@ -58,6 +58,15 @@
 	k8s metric server  api server FailedDiscoveryCheck 해결(Client.Timeout exceeded while awaiting headers)
 	컨테이너화된 조건으로 metric server 가 통신함 (포트 4443) 그래서 ec2에 포트 4443 열어줘야함
 	
+### 2022.11.2
+	
+	argocd 에러를 고치다가 중대한 사항을 발견함 
+	"Unable to create application: application spec for guestbook is invalid: InvalidSpecError: repository not accessible: repo client error while testing 	repository: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp: lookup argocd-repo-server: i/o timeout"
+	
+        애초에 포드간 통신이 되지 않음을 발견 이유를 보니 ec2 ubunut 환경에서 ping으로 노드간 통신결과 aws 방화벽으로 막혀있음
+        해결방안 ICMP로 보안그룹을 허용해주면 해결 (같은 그룹이니 한개만 편집하면 가능) 10.30 문제고 4443 열지 않아도 될것으로 보임
+        서브넷 노드간 통신이 안되어도 kubejoin이 가능햇던이유 :  통신가능한 포트만 열어줘서 가능했던것
+	
 	
 	
 ## 참고사항
