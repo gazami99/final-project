@@ -1,21 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-deployment
+  name: nginx-deployment
 spec:
   selector:
     matchLabels:
-      app: spring-boot
-  replicas: 3 
+      app: nginx
+  replicas: 2 
   template:
     metadata:
       labels:
-        app: spring-boot
+        app: nginx
     spec:
-      imagePullSecrets:
-      - name: ap-northeast-2-ecr-registry
       containers:
-      - name: spring
-        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:latest
+      - name: nginx
+        image: nginx:latest
         ports:
-        - containerPort: 80      
+        - containerPort: 80
