@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring
-        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring
+        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:latest
         ports:
         - containerPort: 80      
       imagePullSecrets:
