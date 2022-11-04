@@ -16,6 +16,6 @@ spec:
       - name: ap-northeast-2-ecr-registry
       containers:
       - name: spring
-        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image
+        image: "421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image"
         ports:
         - containerPort: 80   
