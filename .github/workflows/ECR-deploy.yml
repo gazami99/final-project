@@ -49,5 +49,5 @@ jobs:
         ECR_REPOSITORY: docker-spring
         IMAGE_TAG: spring_image
       run: |
-        docker build build --platform=linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        docker build --platform=linux/amd64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
