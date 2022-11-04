@@ -12,6 +12,9 @@ spec:
       labels:
         app: spring-boot
     spec:
+      imagePullSecrets:
+      - name: secret-registry
+      
       containers:
       - name: spring
         image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image
