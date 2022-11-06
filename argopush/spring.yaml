@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
       - name: gs-spring-boot-docker
-        image: wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
+        image: nginx:latest
