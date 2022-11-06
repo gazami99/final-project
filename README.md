@@ -71,7 +71,10 @@
         해결안: 일단 argocd 를 제외한 서버는 end point가 argocd-server임 리눅스 명렁어 ping이 원래 먹히질 않음 argocd 기술문서 결과 tls 인증 관련 요구
         tls 인증발급이후 원할한 통신 
 	
-	
+### 2022.11.6
+
+         스프링부트 이미지 불러올시 image crashloopbackoff error 발생imagePullPolicy 명시하지 않으면 ifnotpresent가 default 값 이라 에러값 이미지를 유지함
+	 해결안: 기존에 이미지를 지우거나 imagepullpolicy : always 로 명시해서 작동되는 이미지 반영
 	
 ## 참고사항
 
