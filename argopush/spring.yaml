@@ -1,17 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gs-spring-boot-docker
+  name: spring
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gs-spring-boot-docker
+      app: spring
   template:
     metadata:
       labels:
-        app: gs-spring-boot-docker
+        app: spring
     spec:
       containers:
-      - name: gs-spring-boot-docker
-        image: nginx:latest
+      - name: spring
+        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image
+      imagePullSecrets:
+      - name: regcred
