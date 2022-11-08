@@ -2,12 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   name: spring-service
+
 spec:
   selector:
     app: spring
-    
-    
-spec:
   type: ExternalName
   sessionAffinity: None
   externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
