@@ -7,7 +7,7 @@ spec:
   selector:
     app: spring
   ports:
-  - name : mysql
+  - name : spring-service
     protocol: "TCP"
-    port: 3306
-    targetPort: 3306
+    port: 8080
+    targetPort: 8080
