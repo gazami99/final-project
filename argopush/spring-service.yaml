@@ -6,10 +6,8 @@ metadata:
 spec:
   selector:
     app: spring
-  type: ExternalName
-  sessionAffinity: None
-  externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
+  type: NodePort  
   ports:
-  - port: 3306
-    protocol: TCP
-    targetPort: 3306
+    - port: 3306
+      targetPort: 3306
+      nodePort: 3306
