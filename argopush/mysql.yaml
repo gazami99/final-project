@@ -1,7 +1,9 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: mysql
 spec:
   type: ExternalName
   externalName: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image
+  
+
