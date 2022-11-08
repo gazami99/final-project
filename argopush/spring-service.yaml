@@ -11,3 +11,7 @@ spec:
       protocol: TCP
       targetPort: 8080
       nodePort: 32000
+    - name: SQL
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
