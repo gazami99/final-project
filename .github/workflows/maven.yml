@@ -23,7 +23,7 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: 'playdata'
+          MYSQL_DATABASE: 'final_project'
           MYSQL_USER: 'bigdata'
           MYSQL_PASSWORD: 'bigdata'
         ports:
