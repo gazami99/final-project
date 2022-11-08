@@ -1,0 +1,26 @@
+server:
+  port: 5000
+  servlet:
+    context-path: /gongo
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: bigdata
+    url: jdbc:mysql://localhost/final_project?characterEncoding=UTF-8
+    username: bigdata
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    view:
+      prefix: /WEB-INF
+      suffix: .jsp
