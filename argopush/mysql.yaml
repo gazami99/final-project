@@ -6,7 +6,7 @@ spec:
   type: ExternalName
   externalName: 'database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com:3306'
   ports:
-  - nodePort: 0
-    port: 3306
-    targetPort: 3306
-    protocol: TCP
+#   - nodePort: 0
+#     port: 3306
+#     targetPort: 3306
+#     protocol: TCP
