@@ -1,13 +1,23 @@
 server:
-  port: 5000
+  port: 8080
   servlet:
     context-path: /gongo
+    
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    password: bigdata
-    url: jdbc:mysql://localhost/final_project?characterEncoding=UTF-8
-    username: bigdata
+    primary:
+      endpoint: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      rds-url: jdbc:mysql://database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com/final_project?characterEncoding=UTF-8
+      rds-username: bigdata
+      rds-password: bigdatabigdata
+  
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost/final_project?characterEncoding=UTF-8
+      username: bigdata
+      password: bigdata
+
   jpa:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL8Dialect
