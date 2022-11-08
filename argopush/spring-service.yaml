@@ -5,8 +5,8 @@ metadata:
 spec:
   selector:
     app: spring
-  ports:
-    - name: sql
-      protocol: TCP
-      port: 3306
-      targetPort: 3306
+    
+    
+spec:
+  type: ExternalName
+  externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
