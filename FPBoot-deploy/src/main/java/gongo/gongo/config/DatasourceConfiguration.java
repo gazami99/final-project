@@ -46,9 +46,9 @@ public class DatasourceConfiguration {
     public DataSourceProperties getPrimaryDataSource() { 
 		
         DataSourceProperties sourceProperty = new DataSourceProperties();
-        sourceProperty.setUrl(rdsUrl);
-        sourceProperty.setUsername(rdsName);
-        sourceProperty.setPassword(rdsPw);
+        sourceProperty.setUrl(url);
+        sourceProperty.setUsername(Name);
+        sourceProperty.setPassword(Pw);
 
 
 		try {
@@ -56,7 +56,7 @@ public class DatasourceConfiguration {
 			System.out.println("Checking Primary Network socket");
 			
 	    	InetAddress addr;
-			addr = InetAddress.getByName(rdsHost);
+			addr = InetAddress.getByName("localhost");
 	    	int port = 3306;
 	    	
 	    	SocketAddress sockaddr = new InetSocketAddress(addr, port);
@@ -76,9 +76,9 @@ public class DatasourceConfiguration {
 			
 			System.out.println("fail to connect AWS-RDS");
 			System.out.println("reconnect to localhost");
-			sourceProperty.setUrl(url);
-	        sourceProperty.setUsername(Name);
-	        sourceProperty.setPassword(Pw);
+			sourceProperty.setUrl(rdsUrl);
+	        sourceProperty.setUsername(rdsName);
+	        sourceProperty.setPassword(rdsPw);
 		} 
 	        
 			return sourceProperty;
