@@ -9,4 +9,9 @@ spec:
     
 spec:
   type: ExternalName
+  sessionAffinity: None
   externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
