@@ -6,9 +6,9 @@ server:
 spring:
   datasource:
     primary:
-      endpoint: mysql-rds
+      endpoint: mysqlrds
       driver-class-name: com.mysql.cj.jdbc.Driver
-      rds-url: jdbc:mysql://mysql-rds/final_project?characterEncoding=UTF-8
+      rds-url: jdbc:mysql://mysqlrds/final_project?characterEncoding=UTF-8
       rds-username: bigdata
       rds-password: bigdatabigdata
   
