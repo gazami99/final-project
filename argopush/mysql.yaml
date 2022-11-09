@@ -14,7 +14,7 @@ Spec:
 kind: Endpoints
 apiVersion: v1
 metadata:
- name: mysql-rds
+ name: mysqlrds
 subsets:
  - addresses:
      - ip: 10.0.32.192
