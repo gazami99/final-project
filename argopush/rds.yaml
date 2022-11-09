@@ -4,7 +4,7 @@ metadata:
   name: rdsendpoint
 spec:
   ports:
-  - port: 3306
+  - port: 3307
   targetPort: 3306
 ---
 
