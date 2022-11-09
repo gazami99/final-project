@@ -3,5 +3,20 @@ kind: Service
 metadata:
   name: mysql
 spec:
-  type: ExternalName
-  externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
+  type: ClusterIP
+  ports:
+  - port: 3306
+    targetPort: 3306
+
+
+---
+
+apiVersion: v1
+kind: Endpoints
+metadata:
+ name: mysql
+subsets:
+ - addresses:
+     - ip: 10.0.32.192
+   ports:
+     - port: 3306
