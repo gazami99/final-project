@@ -75,6 +75,19 @@
 
          스프링부트 이미지 불러올시 image crashloopbackoff error 발생imagePullPolicy 명시하지 않으면 ifnotpresent가 default 값 이라 에러값 이미지를 유지함
 	 해결안: 기존에 이미지를 지우거나 imagepullpolicy : always 로 명시해서 작동되는 이미지 반영
+	 
+	 
+### 2022.11.10
+
+         스프링부트 이미지 넣을시 파드에서 RDS endpoint 찾지못해서 스프링부트가 부트 하지못함(개발자간 작업시 localhost로 호출하게함 )
+	 해결안: 
+	 1. 스프링부트 application.yml 에서 스프링부트가 자동추적 못하게 변수라벨을 더넣고 java.net으로 소켓통신메서드로 rds 수신 불가능일경우
+	 강제로 에러를 일으킨다음 localhost로 라우팅하게함
+	 개발자간 작업시 localhost로 호출하게함 
+	 
+	 2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
+	 해결안: kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작 
+	
 	
 ## 참고사항
 
