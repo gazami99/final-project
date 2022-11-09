@@ -1,10 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-service-sql
+  name: mysql-rds
 spec:
-  selector: 
-    app: spirng
+  type: ClusterIP
   ports:
     - port: 3306
       targetPort: 3306
