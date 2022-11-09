@@ -8,7 +8,7 @@ spring:
     primary:
       endpoint: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
       driver-class-name: com.mysql.cj.jdbc.Driver
-      rds-url: jdbc:mysql://database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com/final_project?characterEncoding=UTF-8
+      rds-url: jdbc:mysql://mysql-rds/final_project?characterEncoding=UTF-8
       rds-username: bigdata
       rds-password: bigdatabigdata
   
