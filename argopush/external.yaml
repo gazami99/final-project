@@ -1,0 +1,7 @@
+kind: Service
+apiVersion: v1
+metadata:
+ name: rdsendpoint
+spec:
+ type: ExternalName
+ externalName: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
