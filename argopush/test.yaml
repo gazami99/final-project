@@ -3,5 +3,9 @@ kind: Service
 metadata: 
   name: google
 spec:
-  type: ExternalName 
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ExternalName
   externalName: google.com
