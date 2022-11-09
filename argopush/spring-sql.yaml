@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-service-sql
+spec:
+  selector: 
+    app: spirng
+  ports:
+    - port: 3306
+      targetPort: 3306
