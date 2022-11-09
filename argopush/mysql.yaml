@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
- name: mysql-rds
+ name: mysqlrds
 Spec:
  type: ClusterIP
  ports:
