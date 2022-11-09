@@ -6,7 +6,7 @@ server:
 spring:
   datasource:
     primary:
-      endpoint: database-1.cpjbyuaaolfs.ap-northeast-2.rds.amazonaws.com
+      endpoint: mysql-rds
       driver-class-name: com.mysql.cj.jdbc.Driver
       rds-url: jdbc:mysql://mysql-rds:3306/final_project?characterEncoding=UTF-8
       rds-username: bigdata
