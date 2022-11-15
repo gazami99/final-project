@@ -86,7 +86,12 @@
 	 개발자간 작업시 localhost로 호출하게함 
 	 
 	 2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
-	 해결안: kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작 
+	 해결안: kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
+	 
+### 2022.11.10
+
+         아마존 RDS에 localhost에서 작업하던 데이터를 넣고 싶은데 subnet이 private 이라 퍼블릭엑세스 하더라도 접속 불가
+	 해결안 : private subnet의 정의는 인터넷라우팅이 private 으로 되어있음을 알아서 데이터작업할동안은 외부와 의 네트워크라우팅 허용
 	
 	
 ## 참고사항
