@@ -3,13 +3,11 @@ kind: Service
 metadata:
   name: spring   
 spec:
-  type: NodePort
+  type: NodePort     # 서비스 타입
   ports:
-  - name: service
+  - port: 8080       # 서비스 포트
+    targetPort: 8080   # 타켓, 즉 pod의 포트
     protocol: TCP
-    port: 8080
-    targetPort: 8080
-    nodePort: 32000
+    name: our
   selector:
     app: spring
-  
