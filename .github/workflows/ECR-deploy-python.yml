@@ -38,7 +38,7 @@ jobs:
         pip install -r ./Python-deploy/requirements.txt
     - name: Test with pytest
       run: |
-        python ./test_fuc.py
+        python ./Python-deploy/test_fuc.py
 
 #     - name: Check out code
 #       uses: actions/checkout@v3
