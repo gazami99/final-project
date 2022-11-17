@@ -14,7 +14,7 @@ public class MLService {
     
     @PostConstruct
     public void initWebClient() {
-    	webClient = WebClient.create("http://localhost:5000/gongo/search");
+    	webClient = WebClient.create("http://0.0.0.0:5000/gongo/search");
     }
     
     public String keywordSearching(String purpose, String price) throws Exception {
