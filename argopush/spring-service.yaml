@@ -5,8 +5,13 @@ metadata:
 spec:
   selector: 
     app: spring
-  type: NodePort  
-  ports:
-    - port: 8080
-      targetPort: 8080
-      nodePort: 32000
+  type: NodePort
+  - name: service
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 32000
+    port: 8080
+  - name: flask
+    protocol: TCP
+    targetPort: 5000
+    port: 5000
