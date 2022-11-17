@@ -38,7 +38,7 @@ jobs:
         pip install -r ./Python-deploy/requirements.txt
     - name: Test with pytest
       run: |
-        pytest --rootdir= ./Python-deploy
+        python ./Python-deploy/test_python_CI.py
 
 #     - name: Check out code
 #       uses: actions/checkout@v3
