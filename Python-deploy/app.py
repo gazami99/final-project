@@ -1,3 +1,4 @@
+# _*_ coding: utf-8 _*_
 # http://localhost:5000/tospring
 
 from flask import Flask, render_template, request
