@@ -1,6 +1,0 @@
-flask
-json
-pandas
-joblib
-pickle
-sklearn
