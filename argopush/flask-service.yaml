@@ -6,7 +6,11 @@ spec:
   type: ClusterIP		# 생략 가능
   ports:
   - protocol: TCP
-    targetPort: 5000	# 애플리케이션(파드)을 노출하는 포트
+    targetPort: 8080	# 애플리케이션(파드)을 노출하는 포트
     port: 5000			# 서비스를 노출하는 포트
+  ports:
+  - protocol: TCP
+    targetPort: 5000	# 애플리케이션(파드)을 노출하는 포트
+    port: 8080
   selector:				# 이 서비스가 적용될 파드 정보를 지정 (선택이나 권장 사항)
     app: flask
