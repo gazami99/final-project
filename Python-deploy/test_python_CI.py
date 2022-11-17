@@ -1,10 +1,11 @@
-from package.MLSerivce import findbest
+from app import spring
 
 def mlService():
   
-  test_dict = {'최저가':700000,'용도':0}
-  ml_dict = find_best(test_dict)
+  strings = spring(700000,1)
   
-  assert ml_dict.keys() != None
+  size = len(strings)
+  
+  assert srings != 0
   
   
