@@ -4,11 +4,11 @@ name: Deploy to Amazon ECR Python
 on:
   push:
     paths:
-      - 'Python-delploy/**'
+      - 'Python-deploy/**'
 
   pull_request:
       paths:
-      - 'Python-delploy/**'
+      - 'Python-deploy/**'
  
 
 jobs:
