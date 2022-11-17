@@ -1,6 +1,5 @@
 flask
 json
 pandas
-joblib
-pickle
+numpy
 sklearn
