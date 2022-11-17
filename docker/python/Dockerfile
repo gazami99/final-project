@@ -7,4 +7,4 @@ COPY ${PYTHON_FILE}
 
 RUN pip install -r requirments.txt
 
-ENTRYPOINT ["python","./app.py"]
+ENTRYPOINT ["python","app.py"]
