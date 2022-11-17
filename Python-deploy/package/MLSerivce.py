@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 
-cwd = os.path.dirname(os.path.abspath(__file__)
+cwd = os.path.dirname(os.path.abspath(__file__))
 data =pd.read_csv(cwd+"/data/ML_Assembled PC.csv")
 df_purpose = pd.read_csv(cwd+"/data/target.csv")
 y = df_purpose.drop(['최저가','용도','Unnamed: 0'],axis=1)
