@@ -1,11 +1,14 @@
+import os
 import numpy as np 
 import pandas as pd
 from sklearn.utils import shuffle
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
-data =pd.read_csv("./data/ML_Assembled PC.csv")
-df_purpose = pd.read_csv("./data/target.csv")
+
+cwd = os.getcwd()  # Get the current working directory (cwd)
+data =pd.read_csv(cwd+"/data/ML_Assembled PC.csv")
+df_purpose = pd.read_csv(cwd+"/data/target.csv")
 y = df_purpose.drop(['최저가','용도','Unnamed: 0'],axis=1)
 X = pd.DataFrame(df_purpose,columns = ['최저가','용도'])
 
@@ -40,6 +43,7 @@ def find_best(target_dict):
     predict_df = pd.DataFrame(model.predict(target_df),columns = predict_columns)
     df_best  = data
     df_best = df_best.astype({'최저가':'int64'})
+    df_best['eval'] = 0
     
     
     cpu_score = predict_df['CPU Score'][0]
@@ -87,14 +91,17 @@ def find_best(target_dict):
             
             
     
-    df_best.loc[:,'CPU Score'] = abs(df_best.loc[:,'CPU Score']-cpu_score)
-    df_best.loc[:,'GPU Score'] = abs(df_best.loc[:,'GPU Score']-gpu_score)
-    df_best.loc[:,'최저가'] = abs(df_best.loc[:,'최저가']-price)
+    df_best.loc[:,'CPU Score'] = (abs(df_best.loc[:,'CPU Score']-cpu_score)) **2
+    df_best.loc[:,'GPU Score'] = (abs(df_best.loc[:,'GPU Score']-gpu_score)) **3
+    df_best.loc[:,'최저가'] = (abs(df_best.loc[:,'최저가']-price)) **2
     
+    df_best.loc[:,'eval']= (df_best.loc[:,'CPU Score'] +df_best.loc[:,'GPU Score']
+                            +df_best.loc[:,'최저가']) **0.2
     
-    best_product = df_best.sort_values(['최저가','GPU Score','CPU Score']).head(5).reset_index(drop=True).loc[0,'제품 코드']
+    best_product = df_best.sort_values(['eval']).head(5).reset_index(drop=True).loc[0,'제품 코드']
     
-    
+#     data.loc[data['제품 코드'] == best_product].reset_index(drop=True).to_dict('records')
     return data.loc[data['제품 코드'] == best_product].reset_index(drop=True).to_dict('records')
+    
     
     
