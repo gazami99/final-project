@@ -13,7 +13,8 @@ def spring(purpose,price):
 
     find_info = {'최저가':[int(price)],'용도':[int(purpose)]}
     #json.dumps(MLSerivce.find_best(find_info))
-    return json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
+    # json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
+    return "good"
     
 
 
