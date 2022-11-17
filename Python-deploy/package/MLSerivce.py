@@ -1,4 +1,3 @@
-import os
 import numpy as np 
 import pandas as pd
 from sklearn.utils import shuffle
@@ -6,9 +5,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 
 
-cwd = os.getcwd()  # Get the current working directory (cwd)
-data =pd.read_csv(cwd+"/data/ML_Assembled PC.csv")
-df_purpose = pd.read_csv(cwd+"/data/target.csv")
+
+data =pd.read_csv("data/ML_Assembled PC.csv")
+df_purpose = pd.read_csv("data/target.csv")
 y = df_purpose.drop(['최저가','용도','Unnamed: 0'],axis=1)
 X = pd.DataFrame(df_purpose,columns = ['최저가','용도'])
 
