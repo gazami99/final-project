@@ -1,5 +1,5 @@
 
-name: Deploy to Amazon ECR - Python
+name: Deploy to Amazon ECR Python
 
 on:
   push:
