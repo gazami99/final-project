@@ -1,8 +1,7 @@
-# _*_ coding: utf-8 _*_
+
 # http://localhost:5000/tospring
 
 from flask import Flask, render_template, request
-from package import MLSerivce
 import json
 
 app = Flask(__name__)
@@ -10,7 +9,7 @@ app = Flask(__name__)
 @app.route('/gongo/search/keyword/<purpose>/<price>', methods=['GET'])
 def spring(purpose,price):
 
-    find_info = {'최저가':[int(price)],'용도':[int(purpose)]}
+
     #json.dumps(MLSerivce.find_best(find_info))
     # json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
     return "good"
