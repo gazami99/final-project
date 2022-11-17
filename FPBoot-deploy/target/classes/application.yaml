@@ -1,0 +1,36 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /gongo
+    
+spring:
+  datasource:
+    primary:
+      endpoint: rdsendpoint
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      rds-url: jdbc:mysql://rdsendpoint:3306/final_project?characterEncoding=UTF-8
+      rds-username: bigdata
+      rds-password: bigdatabigdata
+  
+    secondary:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/final_project?characterEncoding=UTF-8
+      username: bigdata
+      password: bigdata
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    view:
+      prefix: /WEB-INF
+      suffix: .jsp
