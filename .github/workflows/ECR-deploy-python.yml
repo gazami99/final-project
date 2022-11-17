@@ -33,12 +33,12 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python pip install --upgrade pip
-        python pip install pytest
+        python -m pip install --upgrade pip
+        python -m pip install pytest
         pip install -r ./Python-deploy/requirements.txt
     - name: Test with pytest
       run: |
-        pytest
+        python -m pytest
 
 #     - name: Check out code
 #       uses: actions/checkout@v3
