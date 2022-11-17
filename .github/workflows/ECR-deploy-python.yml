@@ -35,8 +35,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pytest
-        if [ -f Python-deploy/requirements.txt ]; then pip install -r Python-deploy/requirements.txt; fi
-        
+        python -m pip install -r Python-deploy/requirements.txt;
     - name: Test with pytest
       run: |
         pytest
