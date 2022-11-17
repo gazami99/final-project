@@ -7,6 +7,6 @@ spec:
     app: spring
   type: NodePort  
   ports:
-    - port: 8080
+    - port: 5000
       targetPort: 8080
       nodePort: 32000
