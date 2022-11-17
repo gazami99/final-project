@@ -38,6 +38,7 @@ jobs:
         pip install -r ./Python-deploy/requirements.txt
     - name: Test with pytest
       run: |
+        cd ./Python-deploy
         pytest
 
 #     - name: Check out code
