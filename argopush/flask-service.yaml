@@ -7,10 +7,10 @@ spec:
   - name: springget
     protocol: TCP
     targetPort: 5000
-    port: 8080
+    port: 5000
   - name: flaskget
     protocol: TCP
     targetPort: 8080
-    port: 5000
+    port: 8080
   selector:				# 이 서비스가 적용될 파드 정보를 지정 (선택이나 권장 사항)
     app: flask
