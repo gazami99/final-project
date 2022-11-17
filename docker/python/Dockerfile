@@ -1,9 +1,7 @@
 
 FROM python:3.8
 
-WORKDIR /code
-
-COPY Python-deploy/
+COPY Python-deploy/ .
 
 RUN pip install -r requirments.txt
 
