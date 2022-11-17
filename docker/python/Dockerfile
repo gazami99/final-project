@@ -1,12 +1,10 @@
 
 FROM python:3.8
 
-WORKDIR /usr/src/app 
+ARG PYTHON_FILE=Python-deploy/**
 
-COPY requirments.txt .
+COPY ${PYTHON_FILE}
 
 RUN pip install -r requirments.txt
 
-COPY src/ .
-
-ENTRYPOINT ["python","./server.py"]
+ENTRYPOINT ["python","./app.py"]
