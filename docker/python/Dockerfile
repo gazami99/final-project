@@ -1,7 +1,7 @@
 
 FROM python:3.8
 
-ARG PYTHON_FILE=Python-deploy/**
+ARG PYTHON_FILE=Python-deploy/
 
 COPY ${PYTHON_FILE}
 
