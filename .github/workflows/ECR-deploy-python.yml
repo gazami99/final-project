@@ -67,4 +67,4 @@ jobs:
         ECR_REPOSITORY: docker-spring
         IMAGE_TAG: python_image
       run: |
-        docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --push --no-cache .
+        docker buildx build --file ./docker/python/Dockerfile --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --push --no-cache .
