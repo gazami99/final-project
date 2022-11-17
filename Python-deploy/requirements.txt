@@ -1,5 +1,4 @@
 flask
-json
 pandas
 numpy
 sklearn
