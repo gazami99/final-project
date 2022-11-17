@@ -16,11 +16,7 @@ spec:
       - name: spring
         image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:spring_image
         ports:
-        - containerPort: 3306
-        ports:
         - containerPort: 8080
-        ports:
-        - containerPort: 5000
         imagePullPolicy: Always
       imagePullSecrets:
       - name: regcred
