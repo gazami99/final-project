@@ -4,8 +4,6 @@ from flask import Flask, render_template, request
 from package import MLSerivce
 import json
 
-import urllib.request
-
 app = Flask(__name__)
 
 @app.route('/gongo/search/keyword/<purpose>/<price>', methods=['GET'])
