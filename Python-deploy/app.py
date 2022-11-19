@@ -13,6 +13,16 @@ def spring(purpose,price):
     #json.dumps(MLSerivce.find_best(find_info))
     # json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
     return "good"
+
+@app.route('/', methods=['GET'])
+def spring(purpose,price):
+
+
+    #json.dumps(MLSerivce.find_best(find_info))
+    # json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
+    return "good"
+
+
     
 
 
