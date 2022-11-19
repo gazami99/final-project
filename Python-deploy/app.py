@@ -15,7 +15,7 @@ def spring(purpose,price):
     return "good"
 
 @app.route('/', methods=['GET'])
-def spring(purpose,price):
+def hi(purpose,price):
 
 
     #json.dumps(MLSerivce.find_best(find_info))
