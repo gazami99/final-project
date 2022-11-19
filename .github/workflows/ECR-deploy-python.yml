@@ -64,7 +64,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: docker-spring
+        ECR_REPOSITORY: docker-python
         IMAGE_TAG: python_image
       run: |
         docker buildx build --file ./docker/python/Dockerfile --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --push --no-cache .
