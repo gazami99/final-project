@@ -55,6 +55,8 @@ def find_best(target_dict):
     storage1 = round(predict_df['저장장치1 크기'][0])
     storage2 = round(predict_df['저장장치2 크기'][0])
     price = target_df.iloc[0,0]
+    purpose = target_df.iloc[0,1]
+    weight = purpose ** 0
     
     df_best = df_best.loc[df_best['CPU 제조사'] == cpu_from]
     df_best = df_best.loc[df_best['그래픽 제조사'] == gpu_from]
@@ -91,12 +93,12 @@ def find_best(target_dict):
             
             
     
-    df_best.loc[:,'CPU Score'] = (abs(df_best.loc[:,'CPU Score']-cpu_score)) **2
-    df_best.loc[:,'GPU Score'] = (abs(df_best.loc[:,'GPU Score']-gpu_score)) **3
-    df_best.loc[:,'최저가'] = (abs(df_best.loc[:,'최저가']-price)) **2
+    df_best.loc[:,'CPU Score'] = -((df_best.loc[:,'CPU Score']-cpu_score)) **(1.4 - weight*0.4)
+    df_best.loc[:,'GPU Score'] = -((df_best.loc[:,'GPU Score']-gpu_score)) **(1.0 + weight*0.4)
+    df_best.loc[:,'최저가'] = ((df_best.loc[:,'최저가']-price)) ** 1.1
     
     df_best.loc[:,'eval']= (df_best.loc[:,'CPU Score'] +df_best.loc[:,'GPU Score']
-                            +df_best.loc[:,'최저가']) **0.2
+                            +df_best.loc[:,'최저가']) 
     
     best_product = df_best.sort_values(['eval']).head(5).reset_index(drop=True).loc[0,'제품 코드']
     
@@ -105,3 +107,4 @@ def find_best(target_dict):
     
     
     
+
