@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-spring:python_image
+        image: 421576594835.dkr.ecr.ap-northeast-2.amazonaws.com/docker-python:python_image
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
