@@ -6,6 +6,6 @@ def mlService():
   
   size = len(strings)
   
-  assert srings != 0
+  assert size != 0
   
   
