@@ -11,10 +11,10 @@ spec:
   rules:
   - http:
       paths:
-      - path: /test
+      - path: /gongo
         pathType: Prefix
         backend:
           service:
-            name: spring
+            name: spring-service
             port:
-              number: 80
+              number: 8080
