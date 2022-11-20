@@ -11,8 +11,8 @@ def spring(purpose,price):
 
 
     #json.dumps(MLSerivce.find_best(find_info))
-    # json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
-    return "good"
+    #json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
+    return json.dumps(MLSerivce.find_best(find_info),ensure_ascii=False)
 
 @app.route('/', methods=['GET'])
 def hi():
