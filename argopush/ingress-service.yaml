@@ -23,7 +23,7 @@ spec:
         path: /
         backend:
           service:
-            name: flask-service
+            name: spring-service
             port:
-              number: 5000        
+              number: 8080        
 
