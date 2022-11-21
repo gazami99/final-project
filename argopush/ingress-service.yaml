@@ -34,7 +34,7 @@ spec:
         path: /
         backend:
           service:
-            name: flask
+            name: flask-service
             port:
               number: 5000        
 
