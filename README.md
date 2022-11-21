@@ -66,11 +66,11 @@
 ### 2022.11.2
 
 	problem: "Unable to create application: application spec for guestbook is invalid: InvalidSpecError: repository not accessible: repo client error while testing 
-						repository:rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial 		tcp:lookup argocd-repo-server: i/o 				timeout"
+						repository:rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp:lookup argocd-repo-server: i/o timeout"
 	
-	solution:  포드간 통신이 되지 않음을 발견 이유를 보니 ec2 ubunut 환경에서 ping으로 노드간 통신결과 aws 방화벽으로 막혀있음
-  해결방안 ICMP로 보안그룹을 허용해주면 해결 (같은 그룹이니 한개만 편집하면 가능) 10.30 문제고 4443 열지 않아도 될것으로 보임x(열여아 함 hostnetwork로 설정해서)
-  서브넷 노드간 통신이 안되어도 kubejoin이 가능햇던이유 :  통신가능한 포트만 열어줘서 가능했던것 <- 2022.11.22 기점으로 이 내용은 틀림
+	solution: 포드간 통신이 되지 않음을 발견 이유를 보니 ec2 ubunut 환경에서 ping으로 노드간 통신결과 aws 방화벽으로 막혀있음
+	          ICMP로 보안그룹을 허용해주면 해결 (같은 그룹이니 한개만 편집하면 가능) 10.30 문제고 4443 열지 않아도 될것으로 보임x(열여아 함 hostnetwork로 설정해서)
+            서브넷 노드간 통신이 안되어도 kubejoin이 가능햇던이유 :  통신가능한 포트만 열어줘서 가능했던것 <- 2022.11.22 기점으로 이 내용은 틀림
 	
 ### 2022.11.3
 	
