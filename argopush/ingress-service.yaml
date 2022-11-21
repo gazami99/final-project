@@ -13,7 +13,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /test
+        path: /
         backend:
           service:
             name: flask-service
