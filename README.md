@@ -34,8 +34,8 @@
 	https://www.notion.so/GongO-b72f0921ed644dd4af6716f2662b8b5b
 
 
-### 팀원:
-spec:
+### 팀원
+
 	-엄호용: General Executive Director, Backend,Frontend  <<특전대대 전역 주특기 통역
 	-박정민: Devops <<개(짓거리)고수
 	-박아름샘: Backend,sql << 자칭 라푼젤
