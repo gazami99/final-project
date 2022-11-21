@@ -20,10 +20,21 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: /
+        path: /gongo
         backend:
           service:
             name: spring-service
             port:
               number: 8080
+  rules:
+  - host: test.gazami.click
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: flask
+            port:
+              number: 5000        
 
