@@ -18,3 +18,9 @@ spec:
             name: spring-service
             port:
               number: 8080
+              
+              
+ tls:
+  - hosts:
+    - test.gazami.click
+    secretName: nginx
