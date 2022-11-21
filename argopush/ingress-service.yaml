@@ -10,10 +10,10 @@ metadata:
 
 spec:
   ingressClassName: nginx
-  tls:
-  - hosts:
-      - test.gazami.click
-    secretName: nginx  
+#   tls:
+#   - hosts:
+#       - test.gazami.click
+#     secretName: nginx  
   rules:
   - host: test.gazami.click
     http:
