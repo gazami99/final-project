@@ -27,6 +27,9 @@
 <img src="https://github.com/gazami99/final-project/blob/main/image/finalproject.drawio.png">
 </div>
 
+### 프로젝트 관련링크
+	https://www.notion.so/GongO-b72f0921ed644dd4af6716f2662b8b5b
+
 
 ## 팀원:
 	
