@@ -26,5 +26,5 @@ spec:
           service:
             name: spring-service
             port:
-              number: 8080        
+              number: 443        
 
