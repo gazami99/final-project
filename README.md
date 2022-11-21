@@ -102,7 +102,7 @@
 ### 2022.11.21
 	
          Ingress 시도중 스프릥부트가 https 응답후 http로 response 함
-	 해결안: 스프링부트 application.yaml 파일에서 use-relative-redirects 추가 
+	 해결안: 스프링부트 application.yaml 파일에서 use-relative-redirects :true 추가 
 
 
 	
