@@ -93,8 +93,7 @@
 	         2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	 
 					 
 	solution: 1. 스프링부트 application.yml 에서 스프링부트가 자동추적 못하게 변수라벨을 더넣고 java.net으로 소켓통신메서드로 rds 수신 불가능일경우
-	             강제로 에러를 일으킨다음 localhost로 라우팅하게하고 개발자간 작업시 localhost로 호출하게함 
-	             
+	          강제로 에러를 일으킨다음 localhost로 라우팅하게하고 개발자간 작업시 localhost로 호출하게함
 						2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
 						kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
 	 
