@@ -5,6 +5,7 @@ metadata:
   name: web-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
+    ingressclass.kubernetes.io/is-default-class: true
 
 spec:
   rules:
