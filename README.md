@@ -42,7 +42,7 @@
 	  -성광식: Python, Data Mining # 가죽공예 동물애호가
 
 
-## 변경사항
+## 변경사항 및 Troubleshooting
 ### 2022.10.02 
 
 	github action maven evn 셋팅완료
