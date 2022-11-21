@@ -48,10 +48,10 @@
 ## MyActivity
 	
 	Github Action CI/CD
-	{
+	
 	Github Action 을 이용한 도커 빌드
   빌드한 도커이미지를 ECR Private Repo 에 등록
-	}
+	
 	
   스프링부트에서 개발자 편의성을위한 Datasource route
   온프리미스환경이라 생각하고 kubeadm으로 AWS EC2위에서 쿠버네티스 환경 구축해보기
