@@ -4,7 +4,7 @@ kind: Ingress
 metadata:
   name: web-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /gongo
     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 
@@ -23,7 +23,7 @@ spec:
         path: /test
         backend:
           service:
-            name: flask-service
+            name: spring-service
             port:
-              number: 5000
+              number: 8080
 
