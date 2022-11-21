@@ -67,6 +67,7 @@ Ingress-nginx 사용해보기
 
 플라스크와 스프링부트간의 MSA 확인
 
+공인인증안된 tls 적용 https 통신
 
 ## 변경사항 및 Troubleshooting
 ### 2022.10.02 
