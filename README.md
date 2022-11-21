@@ -45,6 +45,22 @@
 	  -박아름샘: Backend,sql # 자칭 라푼젤
 	  -성광식: Python, Data Mining # 가죽공예 동물애호가
 
+## MyActivity
+	
+	Github Action CI/CD
+	{
+	Github Action 을 이용한 도커 빌드
+  빌드한 도커이미지를 ECR Private Repo 에 등록
+	}
+	
+  스프링부트에서 개발자 편의성을위한 Datasource route
+  온프리미스환경이라 생각하고 kubeadm으로 AWS EC2위에서 쿠버네티스 환경 구축해보기
+  RDS 를 private subnet으로 두고 데이터 넣을때만 public subnet 처럼 행동하게 바꿔보기 (라우팅 테이블로 igw)
+	VPC 만들고 팀들의 EC2 접근을위한 IAM설정으로 다양한 권한 설정해보기
+  대쉬보드로 관리하기 편하게 argocd 사용
+  Ingress-nginx 사용해보기
+  플라스크와 스프링부트간의 MSA 확인
+
 
 ## 변경사항 및 Troubleshooting
 ### 2022.10.02 
