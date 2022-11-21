@@ -19,3 +19,7 @@ spec:
             name: flask-service
             port:
               number: 5000
+   tls:
+  - hosts:
+    - test.gazami.click
+    secretName: nginx
