@@ -27,11 +27,14 @@
 <img src="https://github.com/gazami99/final-project/blob/main/image/finalproject.drawio.png">
 </div>
 
-### 프로젝트 관련링크
+## 파이널 프로젝트
+
+### 파이널 프로젝트 팀 기획링크
+
 	https://www.notion.so/GongO-b72f0921ed644dd4af6716f2662b8b5b
 
 
-## 팀원:
+### 팀원:
 	
 	엄호용 << 특전대대 전역 주특기 통역
   	박정민 << 개(짓거리)고수
