@@ -5,8 +5,8 @@ metadata:
   name: web-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /gongo
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+#     nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+#     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 
 
 spec:
