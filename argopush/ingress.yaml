@@ -9,7 +9,7 @@ metadata:
 
 spec:
   rules:
-  - http:
+  - http: test.gazami.click
       paths:
       - path: /gongo
         pathType: Prefix
