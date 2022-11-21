@@ -27,5 +27,15 @@ spec:
           service:
             name: spring-service
             port:
-              number: 8080        
- 
+              number: 8080   
+              
+  - host: test.gazami.click
+    http:
+      paths:
+      - pathType: Prefix
+        path: /gongo/search/keyword
+        backend:
+          service:
+            name: flask-service
+            port:
+              number: 5000
