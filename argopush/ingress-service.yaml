@@ -12,9 +12,9 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/gongo"
+        path: /
         backend:
           service:
-            name: spring-service
+            name: flask
             port:
-              number: 8080
+              number: 5000
