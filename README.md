@@ -99,7 +99,10 @@
          ec2 보안그룹에서 인바운드 규칙중 모든 트래픽 허용을 제거 하고 작업중 다른 노드간 클러스터 통신이 원할하지 않음을 발견
 	 해결안 : 각 노드들을 src/dest check disabled 하고 UDP/TCP 가아닌 ip-in-ip 로 프로토콜을 설정하면 노드간 통신이 원할해짐 (calico 통신때문인듯)
 	 
-
+### 2022.11.21
+	
+         Ingress 시도중 스프릥부트가 https 응답후 http로 response 함
+	 해결안: 스프링부트 application.yaml 파일에서 use-relative-redirects 추가 
 
 
 	
