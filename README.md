@@ -35,11 +35,11 @@
 
 
 ### 팀원:
-	
-	엄호용 << 특전대대 전역 주특기 통역
-  	박정민 << 개(짓거리)고수
-  	박아름샘 << 자칭 라푼젤
-  	성광식 << 가죽공예 동물애호가
+spec:
+	-엄호용: General Executive Director, Backend,Frontend  #특전대대 전역 주특기 통역
+	-박정민: Devops #개(짓거리)고수
+	-박아름샘: Backend, # 자칭 라푼젤
+	-성광식: Python, Data Mining # 가죽공예 동물애호가
 
 
 ## 변경사항
