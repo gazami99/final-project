@@ -5,16 +5,16 @@ metadata:
   name: web-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-#   nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-#   nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+
 
 spec:
   ingressClassName: nginx
-#   tls:
-#   - hosts:
-#       - test.gazami.click
-#     secretName: nginx  
+  tls:
+  - hosts:
+      - test.gazami.click
+    secretName: nginx  
   rules:
   - host: test.gazami.click
     http:
