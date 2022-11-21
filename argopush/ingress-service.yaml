@@ -8,12 +8,13 @@ metadata:
 
 spec:
   rules:
-  - http:
+  - host: "test.gazami.click"
+    http:
       paths:
-      - path: /test
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/gongo"
         backend:
           service:
-            name: web-svc
+            name: spring-service
             port:
-              number: 80
+              number: 8080
