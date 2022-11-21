@@ -59,56 +59,64 @@
 	
 ### 2022.10.30
 	
-	k8s metric server  api server FailedDiscoveryCheck 해결(Client.Timeout exceeded while awaiting headers)
-	컨테이너화된 조건으로 metric server 가 통신함 (포트 4443) 그래서 ec2에 포트 4443 열어줘야함
+	problem: metric server error -> k8s metric server  api server FailedDiscoveryCheck 해결(Client.Timeout exceeded while awaiting headers)
+	
+	solution: 컨테이너화된 조건으로 metric server 가 통신함 (포트 4443) 그래서 ec2에 포트 4443 열어줘야함(hostnetwork로 지정했기 때문으로 추정)
 	
 ### 2022.11.2
-	argocd 에러를 고치다가 중대한 사항을 발견함 
-	"Unable to create application: application spec for guestbook is invalid: InvalidSpecError: repository not accessible: repo client error while testing 	repository:
-	rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp: lookup argocd-repo-server: i/o timeout"
+
+	problem: "Unable to create application: application spec for guestbook is invalid: InvalidSpecError: repository not accessible: repo client error while testing 
+						repository:rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing dial tcp: lookup argocd-repo-server: i/o timeout"
 	
-	애초에 포드간 통신이 되지 않음을 발견 이유를 보니 ec2 ubunut 환경에서 ping으로 노드간 통신결과 aws 방화벽으로 막혀있음
+	solution:  포드간 통신이 되지 않음을 발견 이유를 보니 ec2 ubunut 환경에서 ping으로 노드간 통신결과 aws 방화벽으로 막혀있음
   해결방안 ICMP로 보안그룹을 허용해주면 해결 (같은 그룹이니 한개만 편집하면 가능) 10.30 문제고 4443 열지 않아도 될것으로 보임x(열여아 함 hostnetwork로 설정해서)
-  서브넷 노드간 통신이 안되어도 kubejoin이 가능햇던이유 :  통신가능한 포트만 열어줘서 가능했던것
+  서브넷 노드간 통신이 안되어도 kubejoin이 가능햇던이유 :  통신가능한 포트만 열어줘서 가능했던것 <- 2022.11.22 기점으로 이 내용은 틀림
 	
 ### 2022.11.3
 	
-	포드간 통신이 원할하지 않아 argocd가 먹통이 됨
-	해결안: 일단 argocd 를 제외한 서버는 end point가 argocd-server임 리눅스 명렁어 ping이 원래 먹히질 않음 argocd 기술문서 결과 tls 인증 관련 요구
-	tls 인증발급이후 원할한 통신 
+	problem: 포드간 통신이 원할하지 않아 argocd가 먹통이 됨
+	
+	solution: 일단 argocd 를 제외한 서버는 end point가 argocd-server임 리눅스 명렁어 ping이 원래 먹히질 않음 argocd 기술문서 결과 tls 인증 관련 요구
+	          tls 인증발급이후 원할한 통신 
 	
 ### 2022.11.6
 
-	스프링부트 이미지 불러올시 image crashloopbackoff error 발생imagePullPolicy 명시하지 않으면 ifnotpresent가 default 값 이라 에러값 이미지를 유지함
-	해결안: 기존에 이미지를 지우거나 imagepullpolicy : always 로 명시해서 작동되는 이미지 반영
+	problem: 스프링부트 이미지 불러올시 image crashloopbackoff error 발생imagePullPolicy 명시하지 않으면 ifnotpresent가 default 값 이라 에러값 이미지를 유지함
+	           에러값이 나온이유는 ec2 아키텍쳐가 arm64인데 도커 이미지등록은 amd64 아키텍처로 등록되어있었고 그이미지가 변하지않음
+						 
+	solution: 도커이미지빌드를 arm64로 바꾸고 기존에 이미지를 지우거나 imagepullpolicy : always 로 명시해서 작동되는 이미지 반영
 	 
 	 
 ### 2022.11.10
 
-	스프링부트 이미지 넣을시 파드에서 RDS endpoint 찾지못해서 스프링부트가 부트 하지못함 )
-	해결안: 
-	1. 스프링부트 application.yml 에서 스프링부트가 자동추적 못하게 변수라벨을 더넣고 java.net으로 소켓통신메서드로 rds 수신 불가능일경우
-	강제로 에러를 일으킨다음 localhost로 라우팅하게함
-	개발자간 작업시 localhost로 호출하게함 
-	 
-	2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
-	해결안: kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
+	problem: 1. 스프링부트 이미지 넣을시 파드에서 RDS endpoint 찾지못해서 스프링부트가 부트 하지못함 )
+	         2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	 
+					 
+	solution: 1. 스프링부트 application.yml 에서 스프링부트가 자동추적 못하게 변수라벨을 더넣고 java.net으로 소켓통신메서드로 rds 수신 불가능일경우
+	             강제로 에러를 일으킨다음 localhost로 라우팅하게하고 개발자간 작업시 localhost로 호출하게함 
+	             
+						2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
+						  kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
 	 
 ### 2022.11.15
 
-	아마존 RDS에 localhost에서 작업하던 데이터를 넣고 싶은데 subnet이 private 이라 퍼블릭엑세스 하더라도 접속 불가
-	해결안 : private subnet의 정의는 인터넷라우팅이 private 으로 되어있음을 알아서 데이터작업할동안은 외부와 의 네트워크라우팅 허용
+	problem: 아마존 RDS에 localhost에서 작업하던 데이터를 넣고 싶은데 subnet이 private 이라 퍼블릭엑세스 하더라도 접속 불가
+	
+	solution: private subnet의 정의는 인터넷라우팅이 private 으로 되어있음을 알아서 데이터작업할동안은 외부와 의 네트워크라우팅 허용
 	 
 
 ### 2022.11.20
 
-	ec2 보안그룹에서 인바운드 규칙중 모든 트래픽 허용을 제거 하고 작업중 다른 노드간 클러스터 통신이 원할하지 않음을 발견
-	해결안 : 각 노드들을 src/dest check disabled 하고 UDP/TCP 가아닌 ip-in-ip 로 프로토콜을 설정하면 노드간 통신이 원할해짐 (calico 통신때문인듯)
+	problem: ec2 보안그룹에서 인바운드 규칙중 모든 트래픽 허용을 제거 하고 작업중 다른 노드간 클러스터 통신이 원할하지 않음을 발견
+	
+	solution: 각 노드들을 src/dest check disabled 하고 UDP/TCP 가아닌 ip-in-ip 로 프로토콜을 설정하면 노드간 통신이 원할해짐 (calico 통신때문인듯)
+	          또 내부 통신망때문에 security group 소스끼리 묶어서 모든TCP포트개방
 	 
 ### 2022.11.21
 	
-	Ingress 시도중 스프릥부트가 https 응답후 http로 response 함
-	해결안: 스프링부트 application.yaml 파일에서 use-relative-redirects :true 추가 
+	problem: Ingress 시도중 스프릥부트가 https 응답후 http로 response 함
+		
+	solution: 스프링부트 application.yaml 파일에서 use-relative-redirects :true 추가 
 
 
 	
