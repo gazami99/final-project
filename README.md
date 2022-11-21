@@ -96,7 +96,7 @@
 	             강제로 에러를 일으킨다음 localhost로 라우팅하게하고 개발자간 작업시 localhost로 호출하게함 
 	             
 						2. kubernetes에 service 타입중 externalName 으로 직접 RDS endpoint를 보내도록 해줌  그리고 가끔 터지는데 coreDNS 간 충돌이 있어보임	   
-						  kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
+						kubectl -n kube-system rollout restart deployment coredns으로 쿠버네티스 dns 를 재시작
 	 
 ### 2022.11.15
 
