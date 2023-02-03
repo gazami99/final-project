@@ -62,4 +62,4 @@ jobs:
 
     - name: Build, tag, and push image to Github CR
       run: |
-        docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t ghcr.io/ghcr.io/${{ github.repository_owner }}/spring:latest: --push --no-cache .
+        docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t ghcr.io/${{ github.repository_owner }}/spring:latest: --push --no-cache .
