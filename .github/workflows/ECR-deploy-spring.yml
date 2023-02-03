@@ -43,17 +43,6 @@ jobs:
       
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
-    
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ap-northeast-2
-
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
       
     - name: Set up JDK 11
       uses: actions/setup-java@v3
@@ -64,10 +53,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --f ./FPBoot-deploy/pom.xml
 
-    - name: Build, tag, and push image to Amazon ECR
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: docker-spring
-        IMAGE_TAG: spring_image
+    - name: Build, tag, and push image to Github CR
       run: |
+        cat $TOKEN_CONTAINER | docker login https://ghcr.io -u gazami99 --password-stdin
         docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t ghcr.io/gazami99/$IMAGE_TAG:latest: --push --no-cache .
