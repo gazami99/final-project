@@ -1,32 +1,47 @@
-server:
-  port: 8080
-  servlet:
-    context-path: /gongo
-    
 spring:
+  profiles:
+    active:
+      - local
+    group:
+      "local": "testdb,common"
+      "dev":  "testdb,common"
+      "prod": "proddb,common"
+---
+spring:
+  config:
+    activate:
+      on-profile: "proddb"
   datasource:
-    primary:
-      endpoint: rdsendpoint
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      rds-url: jdbc:mysql://rdsendpoint:3306/final_project?characterEncoding=UTF-8
-      rds-username: bigdata
-      rds-password: bigdatabigdata
-  
-    secondary:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/final_project?characterEncoding=UTF-8
-      username: bigdata
-      password: bigdata
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/${DB_NAME}?characterEncoding=UTF-8
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "testdb"
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/final_project?characterEncoding=UTF-8
+    username: bigdata
+    password: bigdata
+  
+ 
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "common"
   jpa:
-    database: mysql
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
     hibernate:
       ddl-auto: update
-    properties:
-      hibernate:
-        globally_quoted_identifiers: true
     show-sql: true
   mvc:
     pathmatch:
@@ -34,3 +49,15 @@ spring:
     view:
       prefix: /WEB-INF
       suffix: .jsp
+
+server:
+  port: 8080
+  tomcat:
+    use-relative-redirects: true  
+  servlet:
+    context-path: /gongo
+
+    
+
+
+
