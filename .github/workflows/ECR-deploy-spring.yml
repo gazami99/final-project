@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      mysql:
+      postgres:
         image: postgres:latest
         env:
           # optional (defaults to `postgres`)
