@@ -19,19 +19,25 @@ jobs:
 
     services:
       mysql:
-        image: mysql:5.7
+        image: postgres:latest
         env:
-          MYSQL_ALLOW_EMPTY_PASSWORD: yes
-          MYSQL_DATABASE: 'final_project'
-          MYSQL_USER: 'bigdata'
-          MYSQL_PASSWORD: 'bigdata'
+          # optional (defaults to `postgres`)
+          POSTGRES_DB: final_project
+          # required
+          POSTGRES_PASSWORD: postgres_password
+          # optional (defaults to `5432`)
+          POSTGRES_PORT: 5432
+          # optional (defaults to `postgres`)
+          POSTGRES_USER: bigdata
         ports:
-        - 3306:3306
-        options: --health-cmd="mysqladmin ping" 
-                 --health-interval=10s 
-                 --health-timeout=5s 
-                 --health-retries=3
-
+          # maps tcp port 5432 on service container to the host
+          - 5432:5432
+        # set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
    
     steps:
 
