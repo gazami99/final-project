@@ -56,15 +56,17 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2
 
-    - name: Login to Amazon ECR
-      id: login-ecr
-      uses: aws-actions/amazon-ecr-login@v1
-      
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.repository_owner }}
+        password: ${{ secrets.TOKEN_CONTAINER }}
 
-    - name: Build, tag, and push image to Amazon ECR
+    - name: Build, tag, and push image to  to Github CR
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: docker-python
         IMAGE_TAG: python_image
       run: |
-        docker buildx build --file ./docker/python/Dockerfile --platform linux/arm64 -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --push --no-cache .
+        docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t ghcr.io/${{ github.repository_owner }}/flask:latest --push --no-cache .
