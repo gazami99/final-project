@@ -62,4 +62,4 @@ jobs:
         ECR_REPOSITORY: docker-python
         IMAGE_TAG: python_image
       run: |
-        docker buildx build --file ./docker/spring/Dockerfile --platform linux/arm64 -t ghcr.io/${{ github.repository_owner }}/flask:latest --push --no-cache .
+        docker buildx build --file ./docker/flask/Dockerfile --platform linux/arm64 -t ghcr.io/${{ github.repository_owner }}/flask:latest --push --no-cache .
