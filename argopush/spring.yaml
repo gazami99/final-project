@@ -61,3 +61,13 @@ spec:
     targetPort: 8080
   selector:
     app: spring
+---
+
+kind: Secret
+type: kubernetes.io/dockerconfigjson
+apiVersion: v1
+metadata:
+  name: regcred
+  namespace: gongo
+stringData:
+  .dockerconfigjson: {"auths":{"docker.pkg.github.com":{"auth":"${{ secrets.DOCKER_CONFIG }}"}}}
