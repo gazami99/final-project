@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring
-  namespace: gongo
 spec:
   replicas: 1
   selector:
@@ -14,35 +13,36 @@ spec:
         app: spring
     spec:
       containers:
-      - name: spring
+      - name: config-demo
         image: ghcr.io/gazami99/spring:latest
-        ports:
-        - containerPort: 8080
-        imagePullPolicy: Always
-      - env:      
+        env:      
+        - name: DB_HOSTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: gongo-secret
+              key: dbHostName
+              
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: gongo-secret
+              key: databaseName
+              
         - name: DB_USERNAME
           valueFrom:
             secretKeyRef:
               name: gongo-secret
               key: dbUserName
-
+              
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
               name: gongo-secret
               key: dbPassword
+        ports:
+        - containerPort: 8080
+              
 
-         - name: DB_NAME
-          valueFrom:
-            secretKeyRef:
-              name: gongo-secret
-              key: databaseName
-
-        - name: DB_HOSTNAME
-          valueFrom:
-            secretKeyRef:
-              name: gongo-secret
-              key: dbHostName
       
 ---
 apiVersion: v1
