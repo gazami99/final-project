@@ -15,9 +15,7 @@ spec:
       containers:
       - name: config-demo
         image: ghcr.io/gazami99/spring:latest
-      imagePullSecrets:
-      - name: regcred
-      
+        
         env:      
         - name: DB_HOSTNAME
           valueFrom:
