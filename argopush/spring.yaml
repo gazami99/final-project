@@ -12,6 +12,9 @@ spec:
       labels:
         app: spring
     spec:
+      imagePullSecrets:
+      - name: regcred
+      
       containers:
       - name: config-demo
         image: ghcr.io/gazami99/spring:latest
