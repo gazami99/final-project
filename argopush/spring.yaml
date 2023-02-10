@@ -44,3 +44,16 @@ spec:
               name: gongo-secret
               key: dbHostName
       
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-service
+  namespace: gongo
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: spring
