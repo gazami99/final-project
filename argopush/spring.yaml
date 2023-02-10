@@ -22,7 +22,7 @@ spec:
         env:      
         - name: DB_HOSTNAME
           valueFrom:
-            configMapKeyRef:
+            secretKeyRef:
               name: gongo-secret
               key: dbHostName
               
