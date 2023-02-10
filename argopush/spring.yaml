@@ -20,29 +20,29 @@ spec:
         - containerPort: 8080
         imagePullPolicy: Always
       - env:      
-          - name: DB_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: gongo-secret
-                key: dbUserName
+        - name: DB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: gongo-secret
+              key: dbUserName
 
-          - name: DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: gongo-secret
-                key: dbPassword
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: gongo-secret
+              key: dbPassword
 
-           - name: DB_NAME
-            valueFrom:
-              secretKeyRef:
-                name: gongo-secret
-                key: databaseName
+         - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: gongo-secret
+              key: databaseName
 
-          - name: DB_HOSTNAME
-            valueFrom:
-              secretKeyRef:
-                name: gongo-secret
-                key: dbHostName
+        - name: DB_HOSTNAME
+          valueFrom:
+            secretKeyRef:
+              name: gongo-secret
+              key: dbHostName
       
 ---
 apiVersion: v1
