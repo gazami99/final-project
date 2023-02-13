@@ -14,6 +14,9 @@ spec:
       labels:
         app: flask
     spec:
+      imagePullSecrets:
+      - name: regcred
+      
       containers:
       - name: flask
         image: ghcr.io/gazami99/flask:latest
