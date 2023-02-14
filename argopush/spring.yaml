@@ -57,6 +57,7 @@ metadata:
 spec:
   ports:
   - port: 8080
+    name: spring-http
     protocol: TCP
     targetPort: 8080
   selector:
