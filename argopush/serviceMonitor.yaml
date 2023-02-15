@@ -9,5 +9,6 @@ spec:
       app: spring
   endpoints:
   - port: http-spring
+    path: /gongo
   namespaceSelector:
     any: true
