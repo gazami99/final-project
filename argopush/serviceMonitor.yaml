@@ -1,0 +1,12 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: example-app
+spec:
+  selector:
+    matchLabels:
+      app: example-app
+  endpoints:
+  - port: http-spring
+  namespaceSelector:
+    any: true
