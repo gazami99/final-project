@@ -29,6 +29,8 @@ kind: Service
 metadata:
   name: flask-service
   namespace: gongo
+  labels:
+    app: flask
 spec:
   ports:
   - port: 5000
