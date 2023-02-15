@@ -54,6 +54,8 @@ kind: Service
 metadata:
   name: spring-service
   namespace: gongo
+  labels:
+    app: spring
 spec:
   ports:
   - port: 8080
