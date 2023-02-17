@@ -143,6 +143,10 @@ Ingress-nginx 사용해보기
 	problem: Ingress 시도중 스프릥부트가 https 응답후 http로 response 함
 		
 	solution: 스프링부트 application.yaml 파일에서 use-relative-redirects :true 추가 
+	
+### 2023.02.14
+	
+	Spring에 profile 추가
 
 
 	
